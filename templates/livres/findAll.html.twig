@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LivresController!{% endblock %}
+
+{% block body %}
+<h1>Liste des livres</h1>
+<table>
+<tr>
+<th>Libelle</th>
+<th>Prix</th>
+<th>Editeur</th>
+<th>DateEdition</th>
+</tr>
+</table>
+{% for livre in livres %}
+<tr>
+<td>{{livre.Libelle}}</td>
+<td>{{livre.Prix}}</td>
+<td>{{livre.Editeur}}</td>
+<td>{{livre.DateEdition|date('d-m-Y')}}</td>
+<td><a href="" class="btn btn-danger">Supprimer</a></td>
+</tr>
+<br>
+{% endfor %}
+</table>
+{% endblock %}
